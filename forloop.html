@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For loop</title>
+</head>
+
+<body>
+
+
+    <div id="result"></div>
+    <button id="button"> enter</button>
+
+
+
+
+    <script>
+
+
+
+
+        const button = document.getElementById('button');
+        function ranNum(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+        button.addEventListener('click', () => {
+
+
+            // Random number generated between 20 and 40
+            const randomNumber = ranNum(20, 40);
+            console.log(randomNumber);
+
+            // get user input
+            let userInput = prompt(
+                "Guess a number between 20 and 40"
+            );
+
+            // The loop
+            while (true) {
+
+                if (isNaN(userInput)) {
+                    userInput = prompt(' Enter a  Number between 20 and 40.');
+                    continue;
+                }
+
+
+                userInput = Number(userInput);
+
+                // Check if the guess is correct
+                if (userInput === randomNumber) {
+                    document.getElementById('result').innerText = "Cogratulations!!! You've Won";
+                    break;
+                } else {
+                    userInput = prompt('Wrong! Try again:');
+                }
+            }
+        });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
