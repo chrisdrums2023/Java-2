@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch</title>
+</head>
+
+<body>
+    <div id="result"></div>
+
+    <script>
+
+
+        let Presidents = [
+            {
+                Id: 1,
+                name: 'Abubakar Tafawa Balewa',
+                year: 1960,
+            },
+
+            {
+                Id: 2,
+                name: 'Aguyi Ironsi',
+                year: 1966,
+            },
+
+            {
+                Id: 3,
+                name: 'Yakubu Gowon',
+                year: 1966,
+            },
+
+            {
+                Id: 4,
+                name: ' Murtala Mohammed',
+                year: 1975,
+
+            },
+
+            {
+                Id: 5,
+                name: 'Gen Olusegun Aremu Obasanjo',
+                year: 1976,
+
+            },
+
+            {
+                Id: 6,
+                name: 'Shehu Shagari',
+                year: 1979,
+
+            },
+
+            {
+                Id: 7,
+                name: 'Gen Muhammadu Buhari',
+                year: 1983,
+
+            },
+
+            {
+                Id: 8,
+                name: 'Ibrahimm Badamosi Babangida',
+                year: 1985,
+
+            },
+            {
+                Id: 9,
+                name: "Ernest Shonekan",
+                year: 1993,
+            },
+
+            {
+                Id: 10,
+                name: 'Gen Sanni Abacha',
+                year: 1993,
+
+            },
+
+            {
+                Id: 11,
+                name: 'Abdusalam Abubakar',
+                year: 1998,
+
+            },
+
+            {
+                Id: 12,
+                name: 'Aremu Olusegun Obasanjo',
+                year: 1999,
+
+            },
+
+            {
+                Id: 13,
+                name: 'Musa Yaradua',
+                year: 2007,
+
+            },
+
+            {
+                Id: 14,
+                name: 'Goodluck Ebele Jonathan',
+                year: 2011,
+            },
+
+            {
+                Id: 15,
+                name: 'Muhammadu Buhari',
+                year: 2015,
+
+            }
+
+
+
+        ]
+
+
+
+        var leader = Presidents[Math.floor(Math.random() * 16)];
+
+        let userInput = prompt('what year did ' + leader.name + ' ' + 'rule Nigeria');
+        let userDate = Number(userInput);
+        //console.log(userDate);
+
+        switch (userInput == Number(leader.year)) {
+            case true:
+                document.getElementById('result').innerHTML = "its correct";
+                break;
+            case false:
+                document.getElementById('result').innerHTML = 'Its wrong';
+        }
+
+
